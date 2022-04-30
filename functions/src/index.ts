@@ -8,8 +8,11 @@ const express = require("express");
 const app = express();
 app.use(cors({origin: true}));
 
-const notesRoute = require("./routes/notes");
+const githubRoutes = require("./routes/github");
+const statusRoutes = require("./routes/status");
 
 // routings
-app.use("/notes", notesRoute);
+app.use("/github", githubRoutes);
+app.use("/status", statusRoutes);
+
 exports.devNotesAPI = functions.https.onRequest(app);

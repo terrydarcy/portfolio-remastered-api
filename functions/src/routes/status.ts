@@ -1,7 +1,6 @@
-// let router = require("express").Router();
+let statusRouter = require("express").Router();
+let status_controller = require("../controllers/statusController");
 
-// router.get("/", (req: any, res: any) => {
-//     res.send("/status/ is live!");
-//   });
+statusRouter.get("/", status_controller.getStatus);
 
-// export{router};
+module.exports = statusRouter;
