@@ -15,4 +15,4 @@ const statusRoutes = require("./routes/status");
 app.use("/github", githubRoutes);
 app.use("/status", statusRoutes);
 
-exports.devNotesAPI = functions.https.onRequest(app);
+exports.portfolio_remastered = functions.https.onRequest(app);
