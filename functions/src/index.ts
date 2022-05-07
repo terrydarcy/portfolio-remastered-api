@@ -10,9 +10,11 @@ app.use(cors({origin: true}));
 
 const githubRoutes = require("./routes/github");
 const statusRoutes = require("./routes/status");
+const bookingRoutes = require("./routes/booking");
 
 // routings
 app.use("/github", githubRoutes);
 app.use("/status", statusRoutes);
+app.use("/booking", bookingRoutes);
 
 exports.portfolio_remastered = functions.https.onRequest(app);
